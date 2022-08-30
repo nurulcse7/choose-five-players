@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        headingColor: '#FF5E19',
+                        mainColor: '#0D0D0D',
+                        buttonColor: '#015196',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+    <title>Choose five players</title>
+</head>
+
+<body>
+    <!-- Header section  -->
+    <header class="">
+        <section class="container bg-black mx-auto sm:flex items-center pt-20 pr-6">
+
+            <div class="w-4/12 ">
+                <img class="" src="assets/images/header-removebg-preview.png" alt="">
+            </div>
+
+            <div class="text-center w-8/12 ">
+                <h1 class="text-8xl text-headingColor font-serif hover:font-sans">Choose five players</h1>
+                <p class="text-xl text-white m-10">
+                    There are some players on a football team, and the coach needs to choose 5
+                    to put into a game. How many different possible ways can the coach choose a team of 5
+                    if each person has an equal chance of being selected?
+                </p>
+            </div>
+        </section>
+    </header>
+
+    <!-- Main section  -->
+    <main class="bg-mainColor container mx-auto">
+        <section class="flex">
+            <div class="w-3/4 grid grid-cols-3 gap-6">
+                <!-- Player gallery area  -->
+
+                <!-- Player 01  -->
+                <div class="">
+                    <div class="ml-8">
+                        <img src="assets/images/lionel-messi.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4"> Lionel Messi</h3>
+                        <p class="text-gray-50 text-xl pt-4">36 Goals * 120 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Player 02  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/neymar-jr.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Neymar Jr</h3>
+                        <p class="text-gray-50 text-xl pt-4">34 Goals * 118 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT
+                        </button>
+                    </div>
+                </div>
+                <!-- Player 03  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Cristiano-Ronaldo.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Cristiano Ronaldo</h3>
+                        <p class="text-gray-50 text-xl pt-4">32 Goals * 116 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+                <!-- Player 04  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Kylian-Mbappe-1.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Kylian-Mbappe</h3>
+                        <p class="text-gray-50 text-xl pt-4">30 Goals * 114 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+                <!-- Player 05  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Robert Lewandowski.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Robert Lewandowski</h3>
+                        <p class="text-gray-50 text-xl pt-4">28 Goals * 112 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+                <!-- Player 06  -->
+                <div class="">
+                    <div class="ml-8">
+                        <img src="assets/images/sadio-mane.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Sadio Mane</h3>
+                        <p class="text-gray-50 text-xl pt-4">26 Goals * 110 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+
+                <!-- Player 07  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Mohamed Salah.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Mohamed Salah</h3>
+                        <p class="text-gray-50 text-xl pt-4">27 Goals * 111 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+                <!-- Player 08  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Kevin De Bruyne.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Kevin De Bruyne</h3>
+                        <p class="text-gray-50 text-xl pt-4">25 Goals * 109 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT</button>
+                    </div>
+                </div>
+                <!-- Player 09  -->
+                <div>
+                    <div class="ml-8">
+                        <img src="assets/images/Harry Kane.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="player-name" class="text-white text-3xl font-semibold pt-4">Harry Kane</h3>
+                        <p class="text-gray-50 text-xl pt-4">24 Goals * 108 Assist</p>
+                        <button onclick="addPlayer(this)" id="select-btn"
+                            class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-4/5 m-8 p-3 select-button">SELECT
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Calculation area  -->
+            <div class="w1/4 mt-4 text-center">
+                <!-- Calculation 01  -->
+                <div class=" m-4 ">
+                    <h2 class="text-white text-3xl mb-8">Selected <span class="text-blue-500 text-4xl"
+                            id="total-added-player">0</span></h2>
+                    <ul id="list" class="text-gray-50 text-xl">
+
+                    </ul>
+                </div>
+
+                <!-- Calculation 02  -->
+                <div class=" m-4 mt-16">
+                    <h2 class="text-white text-3xl mb-8">Budget</h2>
+                    <div class="text-gray-400 text-xl flex">
+                        <p class="py-2">Per Player</p>
+                        <input id="per-player-field" class="ml-2 text-center text-black" type="number">
+                    </div>
+                    <button id="calculate-btn"
+                        class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-full my-6 p-3 ">
+                        Calculate
+                    </button>
+                    <p class="text-gray-400 text-2xl pb-6">Player Expenses $<span id="player-expenses">0000</span></p>
+
+                    <div class="text-gray-400 text-xl flex my-4">
+                        <p class="py-2">Manager</p>
+                        <input id="manager" class="ml-2 text-center text-black" type="number">
+                    </div>
+
+                    <div class="text-gray-400 text-xl flex my-4">
+                        <p class="py-2">Coach</p>
+                        <input id="coach" class="ml-8 text-center text-black" type="number">
+                    </div>
+                    <button id="calculate-total-btn"
+                        class="text-gray-50 text-2xl bg-buttonColor hover:bg-gray-500 w-full my-6 p-3 ">
+                        Calculate Total
+                    </button>
+                    <div class="text-gray-400 text-2xl pb-6 flex justify-between">
+                        <p class="text-gray-400 text-2xl pb-6"><span class="mr-20">Total</span> <span
+                                class="text-headingColor">$</span><span id="total-expenses"
+                                class="text-headingColor">0000</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section  -->
+    <footer class="bg-mainColor container mx-auto h-48 pt-32 pb-32">
+        <hr class="border-solid border-gray-400">
+        <p class="text-gray-400 text-center pt-8">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
